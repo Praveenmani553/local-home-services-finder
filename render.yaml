@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: local-home-services-finder
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    staticPublishPath: ./out
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
